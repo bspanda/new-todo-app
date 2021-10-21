@@ -1,0 +1,147 @@
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin-top: 32px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TodoPageMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TodoPage-title {
+  font-size: 20px;
+  line-height: 0.5;
+  color:#453C52;
+}
+
+.TodoSection-title {
+  font-size: 14px;
+  line-height: 0.4;
+  color:#453C52;
+}
+
+.TodoSection-todo {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.AddTodo {
+  display: flex;
+  height: 32px;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.AddTodo-text {
+  padding: 6px;
+  font-size: 14px;
+  color: #453C52;
+  border-radius: 4px;
+  border: 2px solid #BFB8CC;
+  width: 190px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.AddTodo-date {
+  padding: 6px;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 2px solid #BFB8CC;
+  width: 93px;
+  height: 32px;
+  cursor: pointer;
+  }
+
+.AddTodo-button {
+  padding: 6px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #48BB78;
+  border: 2px solid #BFB8CC;
+  border-radius: 4px;
+  width: 72px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.TodoSection {
+  margin-top: 14px;
+  line-height: 5px;
+  margin-bottom: 10px;
+}
+
+.TodoSectionTitle {
+  font-size: 20px;
+  display: flex;
+  color: #453C52;
+  align-items: center;
+  line-height: 20px;
+}
+
+.TodoSectionTitle-text {
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 1.4;
+}
+
+.TodoSectionTitle-remainingCount {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #726A7E;
+}
+
+.TodoList {
+  margin-top: 2px;
+  list-style: none;
+  line-height: 12px;
+}
+
+.TodoItem {
+  font-size: 14px;
+  margin-left: 8px;
+  margin-bottom: 2px;
+  color: #453C52;
+}
+
+.TodoItem-container:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.TodoItem-DeleteButton {
+  margin-left: 10px;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.TodoItem-container:hover .TodoItem-DeleteButton {
+  visibility: visible;
+}
+
+.TodoItem-container {
+  display: flex;
+  padding: 2 px 8 px;
+  align-items: center;
+  font-size: 14px;
+  color: #453C52;
+}
+
+.TodoItem-checkbox {
+  align-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.TodoItem-overduelabel {
+  margin-left: 12px;
+  font-size: 14px;
+  color:#C53030;
+}
