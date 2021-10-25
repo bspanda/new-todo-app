@@ -22,8 +22,8 @@ class TodosController < ApplicationController
       due_date: due_date,
       completed: false,
     )
-    response_text = "hay, the params are : #{new_todo.id}"
-    render plain: response_text
+    #response_text = "hay, the params are : #{new_todo.id}"
+    redirect_to todos_path
   end
 
   def update
