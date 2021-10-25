@@ -3,16 +3,13 @@
     <p class="TodoSectionTitle-text"><%= section_title %></p>
     <p class="TodoSectionTitle-remainingCount"><%= todos.completed.count %> / <%= todos.count %> </p>
   </div>
+
   <ul class="TodoList">
     <% todos.each do |todo| %>
       <li class="TodoItem">
         <label class="TodoItem-container">
           <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-            <input class="TodoItem-checkbox"
-              name="completed"
-              type="checkbox" <%= todo.completed ? "checked" : "" %>
-              onclick="this.form.submit()"
-            />
+            <%= check_box_tag :completed, "completed", todo.completed ? true : false, onclick: "this.form.submit()" %>
           <% end %>
 
           <p class='<%= todo.completed ? "TodoItem-completedText" : "" %>'>
@@ -22,13 +19,17 @@
           <% if show_due_date %>
             <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short) %> </p>
           <% end %>
-          <a href="javascript:void(0)" class="TodoItem-delete">
+
+          <a href="javascript:void(0)" class="TodoItem_DeleteButton">
             <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-              <input class = TodoItem_DeleteButton type='image' src="assets/trash.png" height="15" width="14">
+            <%= image_submit_tag("trash.png", height: "15", width: "14") do %>
+            <% end %>
             <% end %>
           </a>
+
         </label>
       </li>
    <% end %>
   </ul>
+
 </section>
