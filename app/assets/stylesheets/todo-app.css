@@ -83,12 +83,12 @@ color:#2a2d33;
 margin-left: 10px;
 align-items: center;
 }
-.TodoItem__DeleteButton {
+.TodoItem_DeleteButton {
   visibility: hidden;
   cursor: pointer;
 }
 
-.TodoItem:hover .TodoItem__DeleteButton {
+.TodoItem:hover .TodoItem_DeleteButton {
   visibility: visible;
 }
 
