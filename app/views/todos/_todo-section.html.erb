@@ -12,7 +12,7 @@
             <%= check_box_tag :completed, "completed", todo.completed ? true : false, onclick: "this.form.submit()" %>
           <% end %>
 
-          <p class='<%= todo.completed ? "TodoItem-completedText" : "" %>'>
+          <p class='<%= todo.completed ? "TodoItem-completed" : "" %>'>
             <%= todo.todo_text %>
           </p>
 
