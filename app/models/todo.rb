@@ -2,6 +2,8 @@ require "date"
 require "active_record"
 
 class Todo < ActiveRecord::Base
+  belongs_to :user
+
   def self.overdue
     all.where("completed = ? and due_date < ? ", false, Date.today)
   end
