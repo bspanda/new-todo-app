@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  get "/" => "home#index"
+
   resources :todos
   resources :users
-  get "/" => "home#index"
-  post "/users/login", to: "users#login"
 end
