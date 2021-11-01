@@ -8,6 +8,10 @@ class Todo < ActiveRecord::Base
     all.where("completed = ? and due_date < ? ", false, Date.today)
   end
 
+  def self.of_user(user)
+    all.where(user_id: user.id)
+  end
+
   def self.due_today
     all.where("due_date = ?", Date.today)
   end
